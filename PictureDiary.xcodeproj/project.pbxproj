@@ -74,9 +74,9 @@
 				1BB311C11D2C543C00B0195B /* PhotosTableViewController.swift */,
 				1BB311C71D2C783F00B0195B /* PhotoEntryCell.swift */,
 				1BB311CB1D2C921F00B0195B /* EntryViewController.swift */,
+				1BB311CD1D2CD11100B0195B /* AddEntryViewController.swift */,
 				1BB311C81D2C783F00B0195B /* PhotoEntryCell.xib */,
 				1BB311AE1D2C506800B0195B /* Main.storyboard */,
-				1BB311CD1D2CD11100B0195B /* AddEntryViewController.swift */,
 				1BB311B41D2C506800B0195B /* Assets.xcassets */,
 				1BB311B61D2C506800B0195B /* LaunchScreen.storyboard */,
 				1BB311B91D2C506800B0195B /* Info.plist */,
@@ -316,6 +316,7 @@
 				1BB311BE1D2C506800B0195B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

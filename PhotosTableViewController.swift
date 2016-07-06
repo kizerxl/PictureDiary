@@ -36,6 +36,7 @@ class PhotosTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
+        fetchEntries()
         self.tableView.reloadData()
     }
     

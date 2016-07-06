@@ -8,11 +8,17 @@
 
 import UIKit
 
-class AddEntryViewController: UIViewController {
+class AddEntryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+    
+    var picker: UIImagePickerController!
 
+    @IBOutlet weak var entryImage: UIImageView!
+    @IBOutlet weak var textField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        textField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +27,40 @@ class AddEntryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] {
+            entryImage.image = image as? UIImage
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
-    */
+    
+    @IBAction func pickTapped(sender: AnyObject) {
+        
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+        } else {
+            picker.sourceType = .PhotoLibrary
+            picker.modalPresentationStyle = .FullScreen
+        }
+        presentViewController(picker, animated: true, completion: nil)
 
+    }
+    
+    @IBAction func cancelButtonTapped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        //saved tapped for now...
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
+
