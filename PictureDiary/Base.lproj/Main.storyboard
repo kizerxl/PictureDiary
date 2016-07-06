@@ -129,12 +129,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="acc-Ir-gNC">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="9Ak-hH-bav" kind="presentation" identifier="addEntry" id="tpy-pz-lSq"/>
+                                <segue destination="9Ak-hH-bav" kind="popoverPresentation" identifier="addEntry" popoverAnchorBarButtonItem="acc-Ir-gNC" id="tpy-pz-lSq">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="qcY-pD-L7p" kind="presentation" identifier="photoEntryScreen" id="Ws4-3c-yO2"/>
+                        <segue destination="qcY-pD-L7p" kind="presentation" identifier="photoEntryScreen" modalPresentationStyle="overCurrentContext" id="Ws4-3c-yO2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i99-aX-rje" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3C-M3-i4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="284"/>
+            <point key="canvasLocation" x="1769" y="275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tVc-Ev-nI7">
