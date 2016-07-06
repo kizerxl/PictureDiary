@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="221" id="KGk-i7-Jjw" customClass="PhotoEntryCell" customModule="PictureDiary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="320"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="319"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JqK-5O-Zgf">
+                        <rect key="frame" x="25" y="8" width="300" height="250"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="oVZ-H5-VMh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2a5-H7-d66">
+                        <rect key="frame" x="235" y="272" width="90" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="DgY-Ob-BO9"/>
+                            <constraint firstAttribute="height" constant="33" id="gD6-Dp-u4a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JqK-5O-Zgf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="42G-Pv-QYg"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2a5-H7-d66" secondAttribute="trailing" constant="17" id="J8g-fZ-f1j"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JqK-5O-Zgf" secondAttribute="bottom" constant="53" id="QvG-qL-1sE"/>
+                    <constraint firstItem="JqK-5O-Zgf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="dPt-zV-Esm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JqK-5O-Zgf" secondAttribute="trailing" constant="17" id="nvY-3a-pv5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2a5-H7-d66" secondAttribute="bottom" constant="15" id="L9Y-m5-YKn"/>
+            </constraints>
+            <connections>
+                <outlet property="dateLabel" destination="2a5-H7-d66" id="qEx-IO-5WJ"/>
+                <outlet property="entryImage" destination="JqK-5O-Zgf" id="Pl1-WI-N6J"/>
+            </connections>
+            <point key="canvasLocation" x="432" y="460"/>
+        </tableViewCell>
+    </objects>
+</document>

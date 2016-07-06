@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		1BB311AB1D2C506800B0195B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311AA1D2C506800B0195B /* AppDelegate.swift */; };
-		1BB311AD1D2C506800B0195B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311AC1D2C506800B0195B /* ViewController.swift */; };
 		1BB311B01D2C506800B0195B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB311AE1D2C506800B0195B /* Main.storyboard */; };
 		1BB311B31D2C506800B0195B /* PictureDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311B11D2C506800B0195B /* PictureDiary.xcdatamodeld */; };
 		1BB311B51D2C506800B0195B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB311B41D2C506800B0195B /* Assets.xcassets */; };
 		1BB311B81D2C506800B0195B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB311B61D2C506800B0195B /* LaunchScreen.storyboard */; };
+		1BB311C21D2C543C00B0195B /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311C11D2C543C00B0195B /* PhotosTableViewController.swift */; };
+		1BB311C51D2C646500B0195B /* PhotoEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311C31D2C646500B0195B /* PhotoEntry+CoreDataProperties.swift */; };
+		1BB311C61D2C646500B0195B /* PhotoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311C41D2C646500B0195B /* PhotoEntry.swift */; };
+		1BB311C91D2C783F00B0195B /* PhotoEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311C71D2C783F00B0195B /* PhotoEntryCell.swift */; };
+		1BB311CA1D2C783F00B0195B /* PhotoEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB311C81D2C783F00B0195B /* PhotoEntryCell.xib */; };
+		1BB311CC1D2C921F00B0195B /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311CB1D2C921F00B0195B /* EntryViewController.swift */; };
+		1BB311CE1D2CD11100B0195B /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB311CD1D2CD11100B0195B /* AddEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BB311A71D2C506800B0195B /* PictureDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB311AA1D2C506800B0195B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BB311AC1D2C506800B0195B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BB311AF1D2C506800B0195B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BB311B21D2C506800B0195B /* PictureDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PictureDiary.xcdatamodel; sourceTree = "<group>"; };
 		1BB311B41D2C506800B0195B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BB311B71D2C506800B0195B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BB311B91D2C506800B0195B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB311C11D2C543C00B0195B /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTableViewController.swift; path = ../PhotosTableViewController.swift; sourceTree = "<group>"; };
+		1BB311C31D2C646500B0195B /* PhotoEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PhotoEntry+CoreDataProperties.swift"; path = "../PhotoEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1BB311C41D2C646500B0195B /* PhotoEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoEntry.swift; path = ../PhotoEntry.swift; sourceTree = "<group>"; };
+		1BB311C71D2C783F00B0195B /* PhotoEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEntryCell.swift; sourceTree = "<group>"; };
+		1BB311C81D2C783F00B0195B /* PhotoEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoEntryCell.xib; sourceTree = "<group>"; };
+		1BB311CB1D2C921F00B0195B /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		1BB311CD1D2CD11100B0195B /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +68,15 @@
 		1BB311A91D2C506800B0195B /* PictureDiary */ = {
 			isa = PBXGroup;
 			children = (
+				1BB311C31D2C646500B0195B /* PhotoEntry+CoreDataProperties.swift */,
+				1BB311C41D2C646500B0195B /* PhotoEntry.swift */,
 				1BB311AA1D2C506800B0195B /* AppDelegate.swift */,
-				1BB311AC1D2C506800B0195B /* ViewController.swift */,
+				1BB311C11D2C543C00B0195B /* PhotosTableViewController.swift */,
+				1BB311C71D2C783F00B0195B /* PhotoEntryCell.swift */,
+				1BB311CB1D2C921F00B0195B /* EntryViewController.swift */,
+				1BB311C81D2C783F00B0195B /* PhotoEntryCell.xib */,
 				1BB311AE1D2C506800B0195B /* Main.storyboard */,
+				1BB311CD1D2CD11100B0195B /* AddEntryViewController.swift */,
 				1BB311B41D2C506800B0195B /* Assets.xcassets */,
 				1BB311B61D2C506800B0195B /* LaunchScreen.storyboard */,
 				1BB311B91D2C506800B0195B /* Info.plist */,
@@ -128,6 +146,7 @@
 				1BB311B81D2C506800B0195B /* LaunchScreen.storyboard in Resources */,
 				1BB311B51D2C506800B0195B /* Assets.xcassets in Resources */,
 				1BB311B01D2C506800B0195B /* Main.storyboard in Resources */,
+				1BB311CA1D2C783F00B0195B /* PhotoEntryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BB311AD1D2C506800B0195B /* ViewController.swift in Sources */,
 				1BB311AB1D2C506800B0195B /* AppDelegate.swift in Sources */,
+				1BB311CE1D2CD11100B0195B /* AddEntryViewController.swift in Sources */,
+				1BB311C51D2C646500B0195B /* PhotoEntry+CoreDataProperties.swift in Sources */,
+				1BB311C61D2C646500B0195B /* PhotoEntry.swift in Sources */,
+				1BB311CC1D2C921F00B0195B /* EntryViewController.swift in Sources */,
+				1BB311C91D2C783F00B0195B /* PhotoEntryCell.swift in Sources */,
+				1BB311C21D2C543C00B0195B /* PhotosTableViewController.swift in Sources */,
 				1BB311B31D2C506800B0195B /* PictureDiary.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
