@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddEntryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
@@ -36,7 +37,6 @@ class AddEntryViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func pickTapped(sender: AnyObject) {
         
-        
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = false
@@ -56,11 +56,35 @@ class AddEntryViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
         //saved tapped for now...
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let entity =  NSEntityDescription.entityForName("PhotoEntry", inManagedObjectContext: managedContext)
+        let entry = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        let convertedImg = UIImagePNGRepresentation((entryImage?.image)!)
+        
+        entry.setValue(convertedImg, forKey: "image")
+        entry.setValue(textField.text!, forKey: "entry")
+        entry.setValue(NSDate(), forKey: "date")
+        
+        do {
+            try managedContext.save()
+            dismissViewControllerAnimated(true, completion: nil)
+            print("SAVED the entity")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n"
+        {
+            textView.resignFirstResponder()
+            return false
+        }
         return true
     }
+   
+    
 }
 

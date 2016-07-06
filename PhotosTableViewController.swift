@@ -16,14 +16,14 @@ class PhotosTableViewController: UITableViewController {
     var managedContext: NSManagedObjectContext!
     
     let cellIdentifier = "photoCell"
-    var dateFormatter: NSDateFormatter!
+//    var dateFormatter: NSDateFormatter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
         tableView.rowHeight = 350
-        dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+//        dateFormatter = NSDateFormatter()
+//        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         tableView.registerNib(UINib(nibName: "PhotoEntryCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         managedContext = appDelegate.managedObjectContext
@@ -58,14 +58,7 @@ class PhotosTableViewController: UITableViewController {
         cell = (NSBundle.mainBundle().loadNibNamed("PhotoEntryCell", owner: self, options: nil)[0] as? PhotoEntryCell)!
         
         let currentEntry = entries[indexPath.row]
-        
-        let date = currentEntry.valueForKey("date") as? NSDate
-        let imageData = currentEntry.valueForKey("image") as? NSData
-        let dateStr = niceDateString(date!)
-        let myImg = UIImage(data:imageData!)
-        
-        cell.dateLabel.text = dateStr
-        cell.entryImage.image = myImg
+        cell.configureWithEntry(currentEntry)
         
         return cell
     }
@@ -121,10 +114,10 @@ class PhotosTableViewController: UITableViewController {
 
     }
     
-    func niceDateString(date: NSDate) -> String {
-        return dateFormatter.stringFromDate(date)
-    }
-    
+//    func niceDateString(date: NSDate) -> String {
+//        return dateFormatter.stringFromDate(date)
+//    }
+//    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "photoEntryScreen" {
